@@ -1,6 +1,6 @@
 
 
-(*Tail recursive split:*)
+(*Tail recursive CPS split:*)
 
 
 let split l = let rec split l f =  match l with
@@ -20,7 +20,7 @@ let rec merge acc = function
 |[], x ->(List.rev acc) @ x
 |x :: xs, y :: ys -> if x < y then merge (x::acc) (xs, (y::ys)) else merge (y::acc) ((x::xs), ys)
 (*
-Tail recursive mergesort algorithm:
+Tail recursive CPS mergesort algorithm:
 *)
 let mergesort list = 
 
