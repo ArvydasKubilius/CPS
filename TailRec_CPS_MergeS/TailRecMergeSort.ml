@@ -1,6 +1,6 @@
 
 
-/*Tail recursive split:*/
+(*Tail recursive split:*)
 
 
 let split l = let rec split l f =  match l with
@@ -11,7 +11,7 @@ let split l = let rec split l f =  match l with
 		 f (hd1::a,hd2::b)) in
 			split l (fun x -> x);;
 
-/*Tail recursive merge :*/
+(*Tail recursive merge :*)
 
 		
 let rec merge acc = function
@@ -19,9 +19,9 @@ let rec merge acc = function
 |x, [] ->(List.rev acc) @ x
 |[], x ->(List.rev acc) @ x
 |x :: xs, y :: ys -> if x < y then merge (x::acc) (xs, (y::ys)) else merge (y::acc) ((x::xs), ys)
-/*
+(*
 Tail recursive mergesort algorithm:
-*/
+*)
 let mergesort list = 
 
 let rec mergesort list f = match list with  
